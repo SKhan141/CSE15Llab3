@@ -15,4 +15,24 @@ public class ArrayTests {
     int[] input1 = { };
     assertArrayEquals(new int[]{ }, ArrayExamples.reversed(input1));
   }
+
+  @Test
+  public void reverseInPlacetest(){
+    int[] input1 = {1, 2, 3};
+
+    int[] reversed = {3, 2, 1};
+
+    ArrayExamples.reverseInPlace(input1);
+    
+    assertArrayEquals(reversed, input1);
+  }
+
+  @Test
+  public void reversedTest(){
+    int[] input1 = {1, 2, 3};
+
+    int[] reversed = {3, 2, 1};
+
+    assertArrayEquals(reversed, ArrayExamples.reversed(input1));
+  }
 }
